@@ -1,7 +1,7 @@
 #include "./ClapTrap.hpp"
 
 ClapTrap::ClapTrap()
-	: name("gago"),
+	: name("unknown"),
 	  hitPoints(10),
 	  energyPoints(10),
 	  attackDamage(0)
@@ -80,7 +80,7 @@ void ClapTrap::takeDamage(unsigned int amount)
 	}
 	else
 	{
-		std::cout << name << " takes " << amount << " of damage" << std::endl;
+		std::cout << name  << " takes " << amount << " of damage" << std::endl;
 		if (hitPoints >= amount)
 			hitPoints -= amount;
 		else
