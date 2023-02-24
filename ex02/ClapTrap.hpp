@@ -17,7 +17,7 @@ class ClapTrap
         ClapTrap(const std::string&);
         ClapTrap(const ClapTrap&);
         ClapTrap& operator=(const ClapTrap&);
-        ~ClapTrap();
+        virtual	~ClapTrap();
 
     protected:
         std::string		name;

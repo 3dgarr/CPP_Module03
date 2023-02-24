@@ -6,9 +6,7 @@ ClapTrap::ClapTrap()
 	  energyPoints(10),
 	  attackDamage(0)
 {
-	// std::cout << "Default Constructor called" << std::endl;
-	std::cout << __PRETTY_FUNCTION__ << std::endl;
-
+	std::cout << "Default Constructor of ClapTrap called" << std::endl;
 };
 
 ClapTrap::ClapTrap(const std::string &__name)
@@ -17,8 +15,7 @@ ClapTrap::ClapTrap(const std::string &__name)
 	  energyPoints(10),
 	  attackDamage(0)
 {
-	// std::cout << "Parameterized Constructor  called" << std::endl;
-	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "Parameterized Constructor of ClapTrap called" << std::endl;
 };
 
 ClapTrap::ClapTrap(const ClapTrap &rhs)
@@ -27,15 +24,12 @@ ClapTrap::ClapTrap(const ClapTrap &rhs)
 	  energyPoints(rhs.energyPoints),
 	  attackDamage(rhs.attackDamage)
 {
-	// std::cout << "Copy Constructor  called" << std::endl;
-	std::cout << __PRETTY_FUNCTION__ << std::endl;
-
+	std::cout << "Copy Constructor of ClapTrap called" << std::endl;
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &rhs)
 {
-	// std::cout << "Operator assignment called" << std::endl;
-	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "Operator assignment of ClapTrap called" << std::endl;
 	if (this == &rhs)
 		return (*this);
 	name = rhs.name;
@@ -47,9 +41,7 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &rhs)
 
 ClapTrap::~ClapTrap()
 {
-	// std::cout << "Destructor  called" << std::endl;
-	std::cout << __PRETTY_FUNCTION__ << std::endl;
-
+	std::cout << "Destructor of ClapTrap called" << std::endl;
 };
 /*==============================================================*/
 
@@ -73,11 +65,8 @@ void ClapTrap::attack(const std::string &target)
 
 void ClapTrap::takeDamage(unsigned int amount)
 {
-	// std::cout << __PRETTY_FUNCTION__ << std::endl;
 	if (hitPoints == 0)
-	{
 		std::cout << name << " is already dead!" << std::endl;
-	}
 	else
 	{
 		std::cout << name  << " takes " << amount << " of damage" << std::endl;
@@ -91,7 +80,6 @@ void ClapTrap::takeDamage(unsigned int amount)
 
 void	ClapTrap::beRepaired(unsigned int amount)
 {
-	// std::cout << __PRETTY_FUNCTION__ << std::endl;
 	if (energyPoints == 0)
 	{
 		std::cout << name << " has no energy to repair itself!" << std::endl;

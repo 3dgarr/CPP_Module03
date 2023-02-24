@@ -2,26 +2,48 @@
 
 ScavTrap::ScavTrap(const std::string& _name) : ClapTrap(_name)
 {
+	std::cout << "Parameterized Constructor of ScavTrap called" << std::endl;
 	hitPoints = 100;
 	energyPoints = 50;
 	attackDamage = 20;
-	std::cout << __PRETTY_FUNCTION__ << std::endl;
 }
 
 ScavTrap::~ScavTrap()
 {
-	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "Destructor of ScavTrap called" << std::endl;
+}
+
+ScavTrap::ScavTrap(const ScavTrap& rhs) : ClapTrap(rhs)
+{
+	std::cout << "Copy Constructor of ScavTrap called" << std::endl;
+	name = rhs.name;
+	hitPoints    = rhs.hitPoints;
+	energyPoints = rhs.energyPoints;
+	attackDamage = rhs.attackDamage;
+
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& rhs)
+{
+	std::cout << "Operator assignment of ScavTrap called" << std::endl;
+	if (this == &rhs)
+		return (*this);
+	name = rhs.name;
+	hitPoints = rhs.hitPoints;
+	energyPoints = rhs.energyPoints;
+	attackDamage = rhs.attackDamage;
+	return (*this);
 }
 
 void	ScavTrap::attack(const std::string& target)
 {
 	if (energyPoints == 0)
 	{
-		std::cout << "ScavTrap " << this->get_name() << " has no energy to attack!" << std::endl;
+		std::cout << "ScavTrap " << name << " has no energy to attack!" << std::endl;
 	}
 	else if (hitPoints == 0)
 	{
-		std::cout << "ScavTrap " << this->get_name() << " has no hitPoints to attack!" << std::endl;
+		std::cout << "ScavTrap " << name << " has no hitPoints to attack!" << std::endl;
 	}
 	else
 	{
@@ -30,7 +52,7 @@ void	ScavTrap::attack(const std::string& target)
 	}
 }
 
-void ScavTrap::guardGate(void)
+void ScavTrap::guardGate(void) const
 {
 	std::cout << "ScavTrap " << name << " is now in Gatekeeper mode" << std::endl;
 }

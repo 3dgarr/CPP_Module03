@@ -13,25 +13,26 @@ int main()
 	// for (size_t i = 0; i < 4; i++)
 	// 	a.attack("bgo");
 
-	ScavTrap	f("gogo");
-	FragTrap	b("bobo");
+	// ScavTrap	f("gogo");
+	ClapTrap*	a = new FragTrap("bob"); //ay sra hamar petqa virtual
 
-	std::cout << "name         : " << b.get_name() << std::endl;
-	std::cout << "energy       : " << b.get_energyPoints() << std::endl;
-	std::cout << "attackDamage : " << b.get_attackDamage() << std::endl;
-	std::cout << "hitpoints    : " << b.get_hitPoints() << std::endl;
-	std::cout << "========================" << std::endl;
+	delete	a;
+	// std::cout << "========================" << std::endl;
+	// FragTrap	b("bobo");
+	// std::cout << "========================" << std::endl;
+	// FragTrap	c(b);
+	// std::cout << "========================" << std::endl;
 		// for (size_t i = 0; i < 102; i++)
 		// 	b.beRepaired(1);
 	std::cout << "========================" << std::endl;
-	b.highFiveGuys();
-	b.highFiveGuys();
-	b.highFiveGuys();
-	b.highFiveGuys();
-	f.guardGate();
-	f.guardGate();
-	f.guardGate();
-	f.guardGate();
+	// c.highFiveGuys();
+	// b.highFiveGuys();
+	// b.highFiveGuys();
+	// b.highFiveGuys();
+	// f.guardGate();
+	// f.guardGate();
+	// f.guardGate();
+	// f.guardGate();
 
 	
 }
