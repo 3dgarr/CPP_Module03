@@ -1,14 +1,16 @@
 #include "./ScavTrap.hpp"
 
-ScavTrap::ScavTrap(const std::string& _name) : ClapTrap(_name)
+ScavTrap::ScavTrap(const std::string& _name) 
+	: ClapTrap(_name)
 {
 	std::cout << "Parameterized Constructor of ScavTrap called" << std::endl;
-	hitPoints = 100;
-	energyPoints = 50;
-	attackDamage = 20;
+	hitPoints = getInitialHitPoints();
+	energyPoints = getInitialEnergyPoints();
+	attackDamage = getInitialAttackDamage();
 }
 
 ScavTrap::ScavTrap()
+	:	ClapTrap()
 {
 	std::cout << "Default Constructor of ScavTrap called" << std::endl;
 }
@@ -18,14 +20,14 @@ ScavTrap::~ScavTrap()
 	std::cout << "Destructor of ScavTrap called" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& rhs) : ClapTrap(rhs)
+ScavTrap::ScavTrap(const ScavTrap& rhs)
+	:	ClapTrap(rhs)
 {
 	std::cout << "Copy Constructor of ScavTrap called" << std::endl;
 	name = rhs.name;
 	hitPoints    = rhs.hitPoints;
 	energyPoints = rhs.energyPoints;
 	attackDamage = rhs.attackDamage;
-
 }
 
 ScavTrap& ScavTrap::operator=(const ScavTrap& rhs)
@@ -60,4 +62,18 @@ void	ScavTrap::attack(const std::string& target)
 void ScavTrap::guardGate(void) const
 {
 	std::cout << "ScavTrap " << name << " is now in Gatekeeper mode" << std::endl;
+}
+
+
+int		ScavTrap::getInitialEnergyPoints() const
+{
+	return (50);
+}
+int		ScavTrap::getInitialHitPoints() const
+{
+	return (100);
+}
+int		ScavTrap::getInitialAttackDamage() const
+{
+	return (20);
 }

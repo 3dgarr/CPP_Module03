@@ -22,9 +22,9 @@ class DiamondTrap :	public FragTrap,
 		Hit points (FragTrap)
 		• Energy points (ScavTrap)
 		• Attack damage (FragTrap)*/
-		using	FragTrap::hitPoints;//100
-		using	ScavTrap::energyPoints;//50
-		using	FragTrap::attackDamage;//30
+		// using	FragTrap::hitPoints;//100
+		// using	ScavTrap::energyPoints;//50
+		// using	FragTrap::attackDamage;//30
 		std::string	name;
 		
 };

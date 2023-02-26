@@ -97,25 +97,5 @@ void	ClapTrap::beRepaired(unsigned int amount)
 	}
 }
 
-/*==============================================================*/
-
-unsigned int ClapTrap::get_attackDamage() const
-{
-	return (attackDamage);
-};
-
-unsigned int ClapTrap::get_energyPoints() const
-{
-	return (energyPoints);
-};
-unsigned int ClapTrap::get_hitPoints() const
-{
-	return (hitPoints);
-}
-
-std::string ClapTrap::get_name() const
-{
-	return (name);
-}
 
 
