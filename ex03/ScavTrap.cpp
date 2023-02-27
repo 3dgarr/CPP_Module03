@@ -65,13 +65,14 @@ void ScavTrap::guardGate(void) const
 }
 
 
-int		ScavTrap::getInitialEnergyPoints() const
-{
-	return (50);
-}
 int		ScavTrap::getInitialHitPoints() const
 {
 	return (100);
+}
+
+int		ScavTrap::getInitialEnergyPoints() const
+{
+	return (50);
 }
 int		ScavTrap::getInitialAttackDamage() const
 {

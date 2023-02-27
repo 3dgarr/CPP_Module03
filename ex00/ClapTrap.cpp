@@ -6,8 +6,8 @@ ClapTrap::ClapTrap()
 	  energyPoints(10),
 	  attackDamage(0)
 {
-	// std::cout << "Default Constructor called" << std::endl;
-	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "Default Constructor called" << std::endl;
+	// std::cout << __PRETTY_FUNCTION__ << std::endl;
 
 };
 
@@ -17,8 +17,8 @@ ClapTrap::ClapTrap(const std::string &__name)
 	  energyPoints(10),
 	  attackDamage(0)
 {
-	// std::cout << "Parameterized Constructor  called" << std::endl;
-	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "Parameterized Constructor  called" << std::endl;
+	// std::cout << __PRETTY_FUNCTION__ << std::endl;
 };
 
 ClapTrap::ClapTrap(const ClapTrap &rhs)
@@ -27,15 +27,15 @@ ClapTrap::ClapTrap(const ClapTrap &rhs)
 	  energyPoints(rhs.energyPoints),
 	  attackDamage(rhs.attackDamage)
 {
-	// std::cout << "Copy Constructor  called" << std::endl;
-	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "Copy Constructor  called" << std::endl;
+	// std::cout << __PRETTY_FUNCTION__ << std::endl;
 
 }
 
 ClapTrap &ClapTrap::operator=(const ClapTrap &rhs)
 {
-	// std::cout << "Operator assignment called" << std::endl;
-	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "Operator assignment called" << std::endl;
+	// std::cout << __PRETTY_FUNCTION__ << std::endl;
 	if (this == &rhs)
 		return (*this);
 	name = rhs.name;
@@ -47,8 +47,8 @@ ClapTrap &ClapTrap::operator=(const ClapTrap &rhs)
 
 ClapTrap::~ClapTrap()
 {
-	// std::cout << "Destructor  called" << std::endl;
-	std::cout << __PRETTY_FUNCTION__ << std::endl;
+	std::cout << "Destructor  called" << std::endl;
+	// std::cout << __PRETTY_FUNCTION__ << std::endl;
 
 };
 /*==============================================================*/

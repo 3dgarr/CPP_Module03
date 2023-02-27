@@ -55,12 +55,8 @@ void	DiamondTrap::whoAmI() const
 {
 	std::cout << "DiamondTraps name is " << this->name << std::endl;
 	std::cout << "ClapTraps    name is " << this->ClapTrap::name << std::endl;
-	std::cout << "HitPoints: " << this->hitPoints << std::endl;
-	std::cout << "EnergyPoints: " << this->energyPoints << std::endl;
-	std::cout << "AttackDamage: " << this->attackDamage << std::endl;
+	// std::cout << "HitPoints: " << this->hitPoints << std::endl;
+	// std::cout << "EnergyPoints: " << this->energyPoints << std::endl;
+	// std::cout << "AttackDamage: " << this->attackDamage << std::endl;
 }
 
-void	DiamondTrap::attack(const std::string& target)
-{
-	ScavTrap::attack(target);
-}
